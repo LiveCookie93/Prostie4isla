@@ -10,17 +10,20 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             int N;//число до которого будем находить простые числа
-            int ty;
+            int ty;// число от которого будем находить простые числа
             Console.WriteLine("Введите начальное число ");
             ty = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Введите последние число ");
-            N = int.Parse(Console.ReadLine());//вводим N
+            N = int.Parse(Console.ReadLine());
+            
             for (int i = ty; i <= N; i++)
             {
+
                 if (isSimple(i))
                 {
-                    Console.Write(i.ToString() + ",");
+                    Console.Write(i.ToString() + " Минимальное простое число в этом диапозоне.");
+                    break;
                 }
             }
         }
